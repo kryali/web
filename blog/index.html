@@ -1,0 +1,27 @@
+---
+custom_title: Kiran Ryali
+layout: base
+---
+
+<h4 class="recent-posts-title">Recent Posts</h4>
+
+{% capture current_year %}{{ site.time | date: '%Y' }}{% endcapture %}
+<ul class="posts">
+  {% for post in site.posts %}
+    {% capture post_year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% if current_year != post_year %}
+      {% capture post_date %}{{ post.date | date: '%b %d, %Y' }}{% endcapture %}
+    {% else %}
+      {% capture post_date %}{{ post.date | date: '%b %d' }}{% endcapture %}
+    {% endif %}
+    <li class="post">
+      <div class="date short-date">{{ post_date }}</div>
+      <a href="{{ post.url }}" title="{{ post.title }}">
+        <h5 class="post-title">{{ post.title }}</h5>
+        {% if post.summary %}
+          <div class="post-summary">{{ post.summary | textilize }}</div>
+        {% endif %}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

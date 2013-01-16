@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-transform: none;
+  text-decoration: none;
+  font-family: 'Quattrocento Sans','Convergence','Rosario','Arial', sans-serif;
+}
+
+body {
+  /*background: url("../images/square_bg.png") #eee;
+  background: #eaf0f0;*/
+  background: #efefef;
+  font-size: 18px;
+  color: #333;
+}
+
+#header-wrapper {
+  overflow: hidden;
+}
+
+#header {
+  margin: 2em auto 0 auto;
+  width: 38em;
+  padding-left: 3em;
+  padding-bottom: 3em;
+}
+  #header #logo {
+    float: left;
+  }
+    #header #logo h1 a {
+      color: #333;
+    }
+    #header #logo p {
+      color: #555;
+    }
+
+  #header ul {
+    float: right;
+    margin-right: 2em;
+  }
+    #header ul li {
+      float: left;
+      position:relative;
+    }
+      #header ul li div {
+        z-index: -1;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+      #header ul li a.image {
+        z-index: 2;
+        display: block;
+        width: 50px;
+        height: 46px;
+        padding: 3px 0;
+        margin-right: 1em;
+      }
+
+      #header ul li#Code a.image  {
+        background: url("http://i.imgur.com/ET5KZ.png") transparent no-repeat;
+      }
+
+      #header ul li#Design a.image  {
+        background: url("http://i.imgur.com/C1aS5.png") transparent no-repeat;
+      }
+
+      #header ul li#Zen a.image  {
+        background: url("http://i.imgur.com/RTKZy.png") transparent no-repeat;
+      }
+
+      #header ul li a.image:hover {
+      }
+
+      #header ul li a.label {
+        z-index: 1;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        text-transform: uppercase;
+        font-size: 10px;
+        text-align: center;
+        width: 50px;
+        color: #555;
+      }
+
+
+#header-single {
+  width: 650px;
+  width: 38em;
+  margin: 2em auto 0 auto;
+  padding-left: 2em;
+}
+  #header-single h1 a {
+    color: #333;
+  }
+
+#footer {
+  margin: 0 auto;
+  width: 750px;
+  height: 60px;
+  overflow: hidden;
+}
+
+  a {
+    color: #1C86EE;
+  }
+
+  strong {
+    font-family: 'Arial', sans-serif;
+    font-size: .95em;
+  }
+
+  a:hover {
+    /*color: #63B8FF;*/
+    text-decoration: underline;
+  }
+
+  h2 a {
+    color: #555;
+  }
+
+  h2 a:hover {
+    /*color: #888;*/
+  }
+
+  h2 {
+    font-size: 150%;
+  }
+
+#page {
+  position: relative;
+}
+
+#content {
+  /*width: 650px;*/
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+#sidebar {
+  width: 250px;
+  padding: 1em;
+  float: right;
+  background: white;
+  border: 1px solid #ccc;
+  margin-top: 2em;
+}
+
+  #sidebar aside {
+    font-size: 14px;
+  }
+
+    #sidebar aside h3{
+      text-transform: uppercase;
+    }
+
+    .post {
+      margin-bottom: 2em;
+      display: block;
+      position: relative;
+      /*box-shadow: 0px 5px 6px -5px #555;*/
+    }
+
+      .post h2, 
+      .post h1 {
+        margin-bottom: .3em;
+        padding-bottom: .3em;
+        border-bottom: 1px solid #ddd;
+        line-height: 37px;
+        letter-spacing: -1px;
+      }
+
+      .post-edit-link {
+        letter-spacing: 1px;
+      }
+
+      .post h2 a {
+      }
+
+      .post p {
+        line-height: 27px;
+        margin: 0 0 1.25em;
+      }
+
+      .post a {
+      }
+
+      .post p:last-child {
+        margin: 0;
+      }
+
+      .post .post-edit-link {
+        font-family: 'Rosario', sans-serif;
+        font-size: 10px;
+        border: 1px solid #ccc;
+        background: #eee;
+        text-transform: uppercase;
+        vertical-align: text-top;
+      }
+
+    .post-contents {
+      margin: 0 auto;
+      width: 34em;
+      background: white;
+      padding: 1.5em;
+      border: 1px solid #ddd;
+      /*border-left: 5px solid #EFEFEF;
+      padding-top: 0em;
+      border-left: 15px solid #EFEFEF;
+      border-top: 15px solid #EFEFEF;*/
+      color: #444;
+      /*box-shadow: 0 7px 6px -6px #333;*/
+    }
+
+    .postmetadata {
+      display: block;
+      width: 10%;
+      font-size: 12px;
+      padding: 1em;
+      text-align: right;
+      margin-top: 1em;
+      color: #aaa;
+    }
+
+      .postmetadata a {
+        color: #888;
+      }
+    .entry h2 {
+      font-size: 125%;
+      border: none;
+      padding: 0;
+      margin: 0;
+      color: #666;
+    }
+
+    .entry h3 {
+      margin-top: 1.25em;
+      margin-bottom: 1em;
+      line-height: 1.2em;
+      color: #555;
+      font-size: 1em;
+    }
+
+    .entry p.wp-caption-text {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-family: 'Rosario', sans-serif;
+      margin: -1.3em 0 0 0;
+      padding: 0em;
+      text-align: center;
+      background: #eee;
+      border: 1px solid #ccc;
+      max-width: 95.5%;
+    }
+    
+    img {
+      border: 1px solid #ccc;
+    }
+
+    img.alignleft, img.alignright, img.aligncenter {
+      margin-top: .5em;
+    }
+
+    img.size-full {
+      max-width: 95.5%;
+      margin-bottom: .5em;
+    }
+
+#comment-wrapper {
+  margin-top: 2em;
+  width: 100%;
+  overflow: hidden;
+}
+
+#comments {
+  padding: 2em;
+  background: white;
+  font-size: 70%;
+  border: 1px solid #ddd;
+}
+
+  #comments #respond {
+  }
+
+  #comments #comment {
+    border: 1px solid #aaa;
+    display: block;
+    width: 100%;
+    margin:1em 0em;
+  }
+
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1em;
+}
+
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+
+.eighty {
+  width: 80%;
+}

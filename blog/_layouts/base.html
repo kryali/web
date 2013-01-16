@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% if page.custom_title %}{{ page.custom_title }}{% elsif page.title %}{{ page.title }}{% endif %}</title>
+  <link href="/css/base.css" rel="stylesheet" type="text/css"/>
+  <link href="http://fonts.googleapis.com/css?family=Quattrocento+Sans" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div id="header-wrapper">
+    <div id="header">
+      <div id="logo">
+        <h1><a href="http://kryali.com/blog/">Kiran Ryali</a></h1>
+        <p>my thoughts and lessons</p>
+      </div>
+      <ul>
+                  <li id="Code">
+              <a class="image" href="http://kryali.com/blog/category/code/"></a>
+              <a class="label" href="http://kryali.com/blog/category/code/">Code</a>
+            </li>
+                    <li id="Design">
+              <a class="image" href="http://kryali.com/blog/category/design/"></a>
+              <a class="label" href="http://kryali.com/blog/category/design/">Design</a>
+            </li>
+                    <li id="Zen">
+              <a class="image" href="http://kryali.com/blog/category/zen/"></a>
+              <a class="label" href="http://kryali.com/blog/category/zen/">Zen</a>
+            </li>
+              </ul>
+    </div>
+  </div>
+<div id="content">
+  {{ content }}
+</div>
+</body>
+</html>
