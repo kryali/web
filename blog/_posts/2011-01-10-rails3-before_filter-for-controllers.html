@@ -1,0 +1,39 @@
+--- 
+layout: post
+title: "Rails: Before_Filter For Controllers"
+tags: 
+- Rails
+status: pending
+type: post
+published: false
+meta: 
+  _syntaxhighlighter_encoded: "1"
+---
+ In Rails, a filter is a way to tell the application to always run a function before or after any action on the controller. For instance, <em>before_filter :authenticate</em> tells rails to always run the authenticate function before any action on the specific controller. One of the issues that came up while I have been developing in rails is finding a way to apply filters to specific controllers. You cannot directly apply before_filter's to controllers because they can only be applied to actions. 
+
+The best way I found to implement this was to apply <em>skip_before_filter</em> to the controllers I wanted to exclude from the filters. For instance, say I have an authentication filter that I verifies that the user is logged in for certain pages and redirects them if they are not.
+
+[ruby]class ApplicationController &gt; ActionController::Base
+before_filter :authenticate
+
+def authenticate
+     if not signed_in?
+          redirect_to welcome_path
+          flash['notice'] = &quot;You need to be signed in to do that!&quot;
+     end
+end
+
+...
+end[/ruby]
+
+Now what if I don't want a user to be authenticated in order to view a Home page? I would simply apply a skip_before_filter as shown below.
+
+[ruby]class HomeController &gt; ActionController::Base
+     skip_before_filter :authenticate
+....
+end
+[/ruby]
+
+Now that was pretty easy wasn't it! Also, you could also go the opposite direction and specifically apply <em>before_filter :authenticate</em> to the controllers you want it to run the authentication. Yet another method would be to subclass the controller that has the before_filter. There are lots of options and paths to accomplish this. 
+
+I hope that this will be of help to some people out there.

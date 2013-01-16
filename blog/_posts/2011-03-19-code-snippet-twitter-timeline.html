@@ -1,0 +1,43 @@
+--- 
+layout: post
+title: "Code Snippet: Twitter Timeline"
+tags: 
+- code snippet
+status: pending
+type: post
+published: false
+meta: 
+  _syntaxhighlighter_encoded: "1"
+---
+Here's a code snippet that grabs the latest tweets from a twitter user in python.
+
+[python]
+import urllib2 as urllib
+import httplib, json
+
+twitter = httplib.HTTPConnection('api.twitter.com')
+twitter.request('GET', '/1/statuses/user_timeline/kiranryali.json')
+resp = twitter.getresponse()
+data = resp.read()
+timeline = json.loads(data)
+
+print resp.status, resp.reason
+
+i = 0
+for status in timeline:
+  i += 1
+  print &quot;@%s&gt; %s&quot; % (status['user']['screen_name'], status['text'])
+
+print &quot;Latest %s tweets&quot; % i
+[/python]
+
+Here's how it works. The script sends a GET request to the twitter api for a specific user's timeline. Since we request the format in json, we can decode the string using pythons built in libraries From there, we have all the information we need. As simple as cake!
+
+[python]
+200 OK
+@kiranryali&gt; hacking on some oauth and #twitterapi stuff
+@kiranryali&gt; got 5 extra invites to @duostack... anyone want?
+@kiranryali&gt; @wavded It's like you knew what I wanted and just made it.
+[/python]
+
+Found <a href="http://dev.twitter.com/pages/intro-to-twitterapi">these slides</a> very helpful.

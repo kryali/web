@@ -1,0 +1,21 @@
+--- 
+layout: post
+title: The Magic of Cufon
+tags: 
+- design
+- Software
+status: pending
+type: post
+published: false
+meta: {}
+
+---
+Today, I was just experimenting with typography in web design and I stumbled upon this nifty javascript utility called Cufón. <a href="http://cufon.shoqolate.com/generate/">Cufón</a> is a fast text replacement utility that allows web developers to take advantage of custom fonts. 
+
+There are two main modules, a font generator and a rendering engine. The generator builds a <a href="http://www.w3.org/TR/SVG/">SVG</a> based on the input to Cufón. This SVG is then sent to the renderer and displayed through the use of the HTML5 <a href="http://en.wikipedia.org/wiki/Canvas_element">canvas </a>element for most browsers. For internet explorer, this utility takes advantage of its <a href="http://en.wikipedia.org/wiki/Vector_Markup_Language">VML</a> engine. Thus, Cufón is an extremely fast and efficient fast text replacement utility across browsers.
+
+The strength of Cufón lies in the ease of its use. It just works. With simple CSS selection, Cufón injects custom fonts to anything. I was able to take advantage of this feature to create this current theme. The navigation links and the date all display images based on a custom font rendered by Cufón.
+
+There's an easy-to-follow guide to Cufón located <a href="http://wiki.github.com/sorccu/cufon/usage">here</a>.
+
+
