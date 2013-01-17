@@ -1,0 +1,102 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Quattrocento Sans','Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	color: #333333;
+}
+
+#delicious-tags-kiranryali{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -100;
+}
+
+.delicious-banner {
+  display: none;
+}
+
+#delicious-tags-kiranryali a { 
+}
+
+#delicious-tags-kiranryali li{
+    float: left;
+    margin: 10px;
+}
+
+body {
+	/*background: #EFEFEF;*/
+  background: #efefef;
+}
+
+a {
+	/*color: #1E90FF; Dodge blue */
+	color: #333;
+	font-size: 19px;
+}
+
+.post {
+	width: 33em;
+	padding: 3em;
+	background: #ffffff;
+	border: 1px solid #ccc;
+  position: fixed;
+  font-family: 'Arial';
+}
+
+  .post p {
+    color: #555555;
+    margin-top: 1em;
+    font-size: 19px;
+  }
+
+  .post ul {
+    margin-top: 1em;
+  }
+
+    .post ul li {
+      line-height: 1.5em;
+      padding: .25em 0;
+      color: #999;
+    }
+
+  .post p.info {
+    font-size: 16px;
+  }
+
+  .post .info .field {
+    border-radius: 20px 0 0 20px;
+    font-weight: 300;
+    padding-left: 1em;
+    padding-right: 0.5em;
+    text-align: right;
+    width: 41px;
+  }
+
+  .post .info .value {
+    border-radius: 0 20px 20px 0;
+    padding-left: 0.5em;
+    padding-right: 1em;
+  }
+
+  .post .info .field, 
+  .post .info .value {
+    background: #e0e0e0;
+    border: none;
+    box-shadow: 0 -1px 0 #ccc;
+    display: inline-block;
+  }
+
+h1 {
+	font-size:24px;
+}
+
+.rtl {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.ltr {
+  direction: ltr;
+   unicode-bidi: bidi-override;
+}
